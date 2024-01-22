@@ -10,7 +10,7 @@ import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const API_KEY = '41511602-ac1f0d864a13fd01c911f294b';
+const API_KEY = '41949985-8da78252305a4c2e980ced1f3';
 const searchFormEl = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -72,6 +72,7 @@ showInfoToast(`We found ${totalHits} images.`);
 if (totalHits > 40) {
   showLoadMoreButton();
 }
+
 } catch (error) {
   console.error('Error fetching images:', error);
   hideLoader();
@@ -177,19 +178,15 @@ async function loadMoreImages() {
 const showLoader = () => {
   loader.style.display = 'block';
 };
-
 const hideLoader = () => {
   loader.style.display = 'none';
 };
-
 const showLoadMoreButton = () => {
   loadMoreButton.style.display = 'block';
 };
-
 const hideLoadMoreButton = () => {
   loadMoreButton.style.display = 'none';
 };
-
 const showWarningToast = (message) => {
   iziToast.warning({
     title: 'Warning!',
